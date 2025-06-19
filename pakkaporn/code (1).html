@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our First Website</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom colors */
+        .bg-primary-light {
+            background-color: #FFE6FF;
+        }
+        .bg-primary {
+            background-color: #FCC2FF;
+        }
+        .bg-primary-dark {
+            background-color: #E5A6E8;
+        }
+        .bg-primary-darker {
+            background-color: #C687CE;
+        }
+        .text-primary {
+            color: #C687CE;
+        }
+        .border-primary {
+            border-color: #E5A6E8;
+        }
+
+        /* Custom animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-[#FFE6FF] to-[#FCC2FF] min-h-screen">
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="flex justify-between">
+                <div class="flex space-x-7">
+                    <div>
+                        <!-- Logo -->
+                        <a href="#" class="flex items-center py-4 px-2">
+                            <span class="font-semibold text-primary-darker text-lg">Our First Website</span>
+                        </a>
+                    </div>
+                    <!-- Primary Nav -->
+                    <div class="hidden md:flex items-center space-x-1">
+                        <a href="index.html" class="py-4 px-2 text-primary-darker border-b-4 border-primary-dark font-semibold">Home</a>
+                        <a href="member1.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 1</a>
+                        <a href="member2.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 2</a>
+                    </div>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button class="outline-none mobile-menu-button">
+                        <svg class="w-6 h-6 text-primary-darker" 
+                            x-show="!showMenu"
+                            fill="none"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden mobile-menu">
+            <ul>
+                <li><a href="index.html" class="block text-sm px-2 py-4 bg-primary-dark text-white font-semibold">Home</a></li>
+                <li><a href="member1.html" class="block text-sm px-2 py-4 hover:bg-primary text-white transition duration-300">Member 1</a></li>
+                <li><a href="member2.html" class="block text-sm px-2 py-4 hover:bg-primary text-white transition duration-300">Member 2</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-20 fade-in">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-primary-darker mb-6">Welcome to Our First Website</h1>
+                <p class="text-xl text-primary-darker max-w-2xl mx-auto mb-10"> 
+                    Get to know each of our members below.
+                </p>
+                <div class="flex justify-center space-x-4">
+                    <a href="#team" class="bg-primary-dark hover:bg-primary-darker text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+                        About Us
+                    </a>
+                    <a href="#about" class="bg-white hover:bg-gray-100 text-primary-darker font-bold py-3 px-6 rounded-lg border border-gray-300 transition duration-300">
+                        About B.S.Ind.Ed.
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white fade-in">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary-darker">What Is B.S.Ind.Ed.</h2>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-10"> 
+                    Design Innovation and Technology
+                <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-primary-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-darker mb-4">
+                        <i class="fas fa-lightbulb text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-darker">Industrial Education</h3>
+                    <p class="text-gray-600">
+                          คือ  คณะที่ผลิตบัณฑิตครูที่มีความรู้ความสามารถทั้งในด้านวิชาชีพครูและการจัดการเรียนรู้  รวมถึงมีความเชี่ยวชาญในสาขาวิชาเฉพาะทางที่เกี่ยวข้องกับเทคโนโลยีและอุตสาหกรรม 
+                    </p>
+                </div>
+                <div class="bg-primary-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-darker mb-4">
+                        <i class="fas fa-users text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-darker">Founder</h3>
+                    <p class="text-gray-600">
+                        ร่วมก่อตั้งโดย  ศาสตาจารย์ ดร.วิทยา  เพียรวิจิตร
+                        ศาสตาจารย์  ประสม  รังสิโรจน์
+                        และ  รองศาสตาจารย์  ดร.โกศล  เพ็ชร์สุสรรณ์
+                    </p>
+                </div>
+                <div class="bg-primary-light p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-primary-darker mb-4">
+                        <i class="fas fa-graduation-cap text-4xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3 text-primary-darker">Education</h3>
+                    <p class="text-gray-600">
+                        หลักสูตรปริญญาตรี  4  ปี  รับทั้งนักศึกษาไทยและนักศึกษาต่างชาติ  จํานวนหน่วยกิตรวมตลอดหลักสูตร  132  หน่วยกิต
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-16 fade-in">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-primary-darker">Our Team</h2>
+                <div class="w-20 h-1 bg-primary-darker mx-auto mt-4"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full md:w-48 object-cover" src="https://cdn.discordapp.com/attachments/1385116874194550959/1385169656574378064/IMG_20241213_123654_956.webp?ex=68551745&is=6853c5c5&hm=193ac23331924c962ff32484dd0f0ffd44b2b87c37d354c6638120fa3d1e538d&" alt="Team Member 1">
+                        </div>
+                        <div class="p-8">
+                            <div class="uppercase tracking-wide text-sm text-primary-darker font-semibold">Pakkaporn Yimnual</div>
+                            <a href="member1.html" class="block mt-1 text-lg leading-tight font-medium text-gray-900 hover:text-primary-darker">Patt-patt</a>
+                            <p class="mt-2 text-gray-500">อายุ  XX  ปี  วันเกิด  20/11/25XX  สัญชาติ  ไทย</p>
+                            <div class="mt-4">
+                                <a href="member1.html" class="text-primary-darker hover:text-primary-darker text-sm font-semibold">View Profile →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
+                    <div class="md:flex">
+                        <div class="md:flex-shrink-0">
+                            <img class="h-48 w-full md:w-48 object-cover" src="https://cdn.discordapp.com/attachments/1385116874194550959/1385170022158172221/Screenshot_20250619_150725_Gallery.jpg?ex=6855179c&is=6853c61c&hm=578890f5fb75145109c73a10ded4c8308b6a51b555ae778773ca70b1ff14a152&" alt="Team Member 2">
+                        </div>
+                        <div class="p-8">
+                            <div class="uppercase tracking-wide text-sm text-primary-darker font-semibold">Prapatsara Khamsuk</div>
+                            <a href="member2.html" class="block mt-1 text-lg leading-tight font-medium text-gray-900 hover:text-primary-darker">Dear</a>
+                            <p class="mt-2 text-gray-500">อายุ  XX  ปี 
+                                วันเกิด  08/08/25XX
+                                สัญชาติ  ไทย
+                            </p>
+                            <div class="mt-4">
+                                <a href="member2.html" class="text-primary-darker hover:text-primary-darker text-sm font-semibold">View Profile →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-primary-darker text-white py-12 fade-in">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Our Project</h3>
+                    <p class="text-primary-light">
+                        A project about our faculty and our personal information.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-primary-light hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="member1.html" class="text-primary-light hover:text-white transition duration-300">Member 1</a></li>
+                        <li><a href="member2.html" class="text-primary-light hover:text-white transition duration-300">Member 2</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <ul class="space-y-2">
+                        <li class="text-primary-light">Email: mzx@gmail.com</li>
+                        <li class="text-primary-light">Phone: (+66) 8X  4XX  XX31</li>
+                        <li class="text-primary-light">Email: yim@gmail.com</li>
+                        <li class="text-primary-light">Phone: (+66) 9X  7XX  XX02</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-primary-light hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-primary-light hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-primary-light hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-primary-light hover:text-white transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-primary mt-8 pt-8 text-center text-primary-light">
+                <p>&copy; 2023 Our Team. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript for mobile menu -->
+    <script>
+        // Mobile menu toggle
+        const btn = document.querySelector('.mobile-menu-button');
+        const menu = document.querySelector('.mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Add fade-in effect to sections as they come into view
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = 1;
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            element.style.opacity = 0;
+            fadeInObserver.observe(element);
+        });
+    </script>
+</body>
+</html>
