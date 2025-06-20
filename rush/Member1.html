@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakkaporn Yimnual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom colors with pink theme */
+        .bg-primary-light {
+            background-color: #FFD6E7;
+        }
+        .bg-primary {
+            background-color: #F04F81;
+        }
+        .bg-primary-dark {
+            background-color: #D43D6F;
+        }
+        .bg-primary-darker {
+            background-color: #B82C5D;
+        }
+        .text-primary {
+            color: #F04F81;
+        }
+        .border-primary {
+            border-color: #F04F81;
+        }
+
+        /* Basic animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-[#FFD6E7] to-[#F8A1C0] min-h-screen">
+    <!-- แถบสีขาวด้านบน -->
+    <div class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3">
+            <h1 class="text-2xl font-bold text-primary-darker font-sans">
+                Pakkaporn Yimnual
+            </h1>
+        </div>
+    </div>
+
+    <!-- ส่วนเนื้อหาหลัก -->
+    <div class="container mx-auto px-4 py-8">
+        <!-- กล่องข้อมูลส่วนตัว -->
+        <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+            <div class="md:flex">
+                <!-- รูปภาพด้านซ้าย -->
+                <div class="md:w-1/3 p-4 flex justify-center items-center">
+                    <img src="https://media.discordapp.net/attachments/1251032782747078728/1385460127259164805/IMG_0682.png?ex=685625ca&is=6854d44a&hm=4c97f50ada65a85efeb8e3da3f18de7786525a1e5e293c04623f17c5a69174fc&=&format=webp&quality=lossless" 
+                         alt="Pakkaporn Yimnual"
+                         class="rounded-lg object-cover h-64 w-64 md:h-80 md:w-80 border-4 border-primary-light">
+                </div>
+                
+                <!-- เนื้อหาด้านขวา -->
+                <div class="md:w-2/3 p-6">
+                    <h2 class="text-2xl font-bold text-primary-darker mb-4 font-sans">ข้อมูลส่วนตัว</h2>
+                    
+                    <div class="space-y-4 text-lg">
+                        <div class="flex items-start">
+                            <div class="w-1/3 text-primary-darker font-semibold font-sans">ชื่อเล่น</div>
+                            <div class="w-2/3 font-sans">แพทแพท</div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-1/3 text-primary-darker font-semibold font-sans">การศึกษา</div>
+                            <div class="w-2/3 font-sans">ปี 1 คณะครุศาสตร์ สาขานวัตกรรมและเทคโนโลยีการออกแบบ</div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="w-1/3 text-primary-darker font-semibold font-sans">มหาวิทยาลัย</div>
+                            <div class="w-2/3 font-sans">สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง</div>
+                        </div>
+                    </div>
+                    
+                    <!-- ส่วนความสนใจที่อัปเดต -->
+                    <div class="mt-6 p-4 bg-primary-light rounded-lg">
+                        <h3 class="text-xl font-semibold text-primary-darker mb-2 font-sans">ความสนใจ</h3>
+                        <p class="font-sans">
+                            <i class="fas fa-heart text-primary mr-2"></i> ชอบงาน Handmade โดยเฉพาะพวกกำไลลูกปัดและเครื่องประดับต่างๆ
+                            <br>
+                            <i class="fas fa-palette text-primary mr-2"></i> สนใจการออกแบบและสร้างสรรค์ผลงานศิลปะ
+                            <br>
+                            <i class="fas fa-hands text-primary mr-2"></i> มีความสุขเวลาทำงานประดิษฐ์ด้วยตัวเอง
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

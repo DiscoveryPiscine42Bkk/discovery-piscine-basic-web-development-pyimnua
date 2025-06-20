@@ -7,24 +7,24 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Custom colors */
+        /* Custom colors with new pink theme */
         .bg-primary-light {
-            background-color: #FFE6FF;
+            background-color: #FFD6E7;
         }
         .bg-primary {
-            background-color: #FCC2FF;
+            background-color: #F04F81;
         }
         .bg-primary-dark {
-            background-color: #E5A6E8;
+            background-color: #D43D6F;
         }
         .bg-primary-darker {
-            background-color: #C687CE;
+            background-color: #B82C5D;
         }
         .text-primary {
-            color: #C687CE;
+            color: #F04F81;
         }
         .border-primary {
-            border-color: #E5A6E8;
+            border-color: #F04F81;
         }
 
         /* Custom animations */
@@ -48,7 +48,7 @@
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-[#FFE6FF] to-[#FCC2FF] min-h-screen">
+<body class="bg-gradient-to-br from-[#FFD6E7] to-[#F8A1C0] min-h-screen">
     <!-- Navigation Bar -->
     <nav class="bg-white shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4">
@@ -62,9 +62,9 @@
                     </div>
                     <!-- Primary Nav -->
                     <div class="hidden md:flex items-center space-x-1">
-                        <a href="index.html" class="py-4 px-2 text-primary-darker border-b-4 border-primary-dark font-semibold">Home</a>
-                        <a href="member1.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 1</a>
-                        <a href="member2.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 2</a>
+                        <a class="py-4 px-2 text-primary-darker border-b-4 border-primary-dark font-semibold">Home</a>
+                        <a href="http://127.0.0.1:5500/rush/Member1.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 1</a>
+                        <a href="http://127.0.0.1:5500/rush/Member2.html" class="py-4 px-2 text-gray-600 hover:text-primary-darker transition duration-300">Member 2</a>
                     </div>
                 </div>
                 <!-- Mobile menu button -->
@@ -100,9 +100,10 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
                 <h1 class="text-4xl md:text-5xl font-bold text-primary-darker mb-6">Welcome to Our First Website</h1>
-                <p class="text-xl text-primary-darker max-w-2xl mx-auto mb-10"> 
-                    Get to know each of our members below.
-                </p>
+                <img src="https://media.discordapp.net/attachments/1384394250401222677/1385481148053983335/-600x400_1.png?ex=6856395e&is=6854e7de&hm=6f0213759bdd7deef16be9bafbcb27e2cf7e9c8e3209877367274ecbc9e76777&=&format=webp&quality=lossless" 
+                     alt="Team Logo" 
+                     class="mx-auto mb-6"
+                     style="width: 2in; height: 2in; object-fit: contain;">
                 <div class="flex justify-center space-x-4">
                     <a href="#team" class="bg-primary-dark hover:bg-primary-darker text-white font-bold py-3 px-6 rounded-lg transition duration-300">
                         About Us
@@ -166,7 +167,7 @@
                 <div class="w-20 h-1 bg-primary-darker mx-auto mt-4"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <!-- Team Member 1 -->
+                <!-- Team Member 1 - ส่วนนี้คงเดิม -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
                     <div class="md:flex">
                         <div class="md:flex-shrink-0">
@@ -177,13 +178,18 @@
                             <a href="member1.html" class="block mt-1 text-lg leading-tight font-medium text-gray-900 hover:text-primary-darker">Patt-patt</a>
                             <p class="mt-2 text-gray-500">อายุ  XX  ปี  วันเกิด  20/11/25XX  สัญชาติ  ไทย</p>
                             <div class="mt-4">
-                                <a href="member1.html" class="text-primary-darker hover:text-primary-darker text-sm font-semibold">View Profile →</a>
+                                <a href="https://www.instagram.com/ppakkapatt?igsh=ZGs1NzRreHlheXhu" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="text-primary-darker hover:text-primary-darker text-sm font-semibold">
+                                   <i class="fab fa-instagram mr-1"></i> View Instagram →
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Team Member 2 -->
+                <!-- Team Member 2 - เปลี่ยนเฉพาะลิงก์นี้เท่านั้น -->
                 <div class="bg-white rounded-lg shadow-md overflow-hidden card-hover transition duration-300">
                     <div class="md:flex">
                         <div class="md:flex-shrink-0">
@@ -197,7 +203,12 @@
                                 สัญชาติ  ไทย
                             </p>
                             <div class="mt-4">
-                                <a href="member2.html" class="text-primary-darker hover:text-primary-darker text-sm font-semibold">View Profile →</a>
+                                <a href="https://www.instagram.com/prapats_araa?igsh=ZmFvMWlkNHBpd3Bw" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer"
+                                   class="text-primary-darker hover:text-primary-darker text-sm font-semibold">
+                                   <i class="fab fa-instagram mr-1"></i> View Instagram →
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -206,7 +217,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Footer - ส่วนนี้คงเดิมทั้งหมด -->
     <footer class="bg-primary-darker text-white py-12 fade-in">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
@@ -251,13 +262,11 @@
                     </div>
                 </div>
             </div>
-            <div class="border-t border-primary mt-8 pt-8 text-center text-primary-light">
-                <p>&copy; 2023 Our Team. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript for mobile menu -->
+    <!-- JavaScript - ส่วนนี้คงเดิมทั้งหมด -->
     <script>
         // Mobile menu toggle
         const btn = document.querySelector('.mobile-menu-button');
@@ -302,3 +311,4 @@
     </script>
 </body>
 </html>
+
